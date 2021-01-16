@@ -5,8 +5,12 @@
 using std::cout;
 using std::endl;
 using std::ifstream;
+using std::max;
+using std::pair;
 using std::string;
 using std::vector;
+
+const vector<pair<int, int> > DIRECTION{ {-1,0},{1,0},{0,-1},{0,1} };
 
 vector<vector<int> > Methods::ReadFile(const string name)
 {
@@ -52,6 +56,31 @@ vector<vector<int> > Methods::ReadFile(const string name)
 InfoLongestPath Methods::CalculateLongestPath(const vector<vector<int> > matrix)
 {
     InfoLongestPath output;
+    
 
     return output;
+}
+int Methods::DFS(int i, int j, const vector<vector<int> >& matrix, vector<vector<int> >& length)
+{
+    if (length[i][j] == -1)
+    {
+        int maxLength = 0;
+
+        for (auto p : DIRECTION)
+        {
+            int x = i + p.first;
+            int y = j + p.second;
+
+            if (x < 0 || x >= static_cast<int>(matrix.size()) || y < 0 || y >= static_cast<int>(matrix[0].size())) continue;
+
+            if (matrix[x][y] < matrix[i][j])
+            {
+                maxLength = max(maxLength, DFS(x, y, matrix, length));
+            }
+        }
+
+        length[i][j] = maxLength + 1;
+    }
+
+    return length[i][j];
 }

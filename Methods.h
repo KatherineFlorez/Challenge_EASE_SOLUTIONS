@@ -13,5 +13,7 @@ class Methods final
 		InfoLongestPath CalculateLongestPath(const std::vector<std::vector<int> > matrix);
 
 	private:
+		int DFS(int i, int j, const std::vector<std::vector<int> >& matrix, std::vector<std::vector<int> >& length);
+
 };
 
