@@ -4,6 +4,7 @@
 
 using std::cin;
 using std::cout;
+using std::endl;
 using std::string;
 using std::vector;
 
@@ -19,6 +20,9 @@ int main()
     if (!matrix.empty())
     {
         InfoLongestPath output = methods.CalculateLongestPath(matrix);
+        cout << "The length of the longest path is " << output.maxLength << endl;
+        cout << "The depth of the longest path is " << output.maxDepth << endl;
     }
+
     return 0;
 }
