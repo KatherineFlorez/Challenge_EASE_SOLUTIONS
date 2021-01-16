@@ -65,23 +65,49 @@ InfoLongestPath Methods::CalculateLongestPath(const vector<vector<int> > matrix)
     int maxCol = 0;
     int maxRow = 0;
     int maxLength = 0;
+    bool pathIsCalculated = false;
 
     for (int i = 0; i < m; ++i)
     {
         for (int j = 0; j < n; ++j)
         {
             int currentLength = DFS(i, j, matrix, length);
+
             if (currentLength > maxLength)
             {
                 maxRow = i;
                 maxCol = j;
                 maxLength = currentLength;
+                pathIsCalculated = false;
+            }
+            else if (currentLength == maxLength)
+            {
+                InfoLongestPath temp = GetPathInfo(i, j, matrix, length);
+
+                if (!pathIsCalculated)
+                {
+                    output = GetPathInfo(maxRow, maxCol, matrix, length);
+                }
+
+                pathIsCalculated = true;
+
+                if (output.maxDepth < temp.maxDepth)
+                {
+                    maxRow = i;
+                    maxCol = j;
+                    maxLength = currentLength;
+                    output = temp;
+                }
             }
         }
     }
 
-    output.maxLength = maxLength;
+    if (!pathIsCalculated)
+    {
+        output = GetPathInfo(maxRow, maxCol, matrix, length);
+    }
 
+    output.maxLength = maxLength;
     return output;
 }
 int Methods::DFS(int i, int j, const vector<vector<int> >& matrix, vector<vector<int> >& length)

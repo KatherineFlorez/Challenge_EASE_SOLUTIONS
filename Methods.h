@@ -17,6 +17,8 @@ class Methods final
 	private:
 		//Depth First Search algorithm for a decreasing path
 		int DFS(int i, int j, const std::vector<std::vector<int> >& matrix, std::vector<std::vector<int> >& length);
-		
+		//GetPathInfo - obtain depth and path of an specific initial point and maximun length
+		InfoLongestPath GetPathInfo(int i, int j, const std::vector<std::vector<int>>& matrix, const std::vector<std::vector<int>>& length);
+
 };
 
