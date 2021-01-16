@@ -1,5 +1,5 @@
 #pragma once
-// InfoLongestPath.h : header file contain the structure InfoLongestPath
+// InfoLongestPath.h : header file contain the maximun depth, length and path
 
 #include<vector>
 
