@@ -56,7 +56,31 @@ vector<vector<int> > Methods::ReadFile(const string name)
 InfoLongestPath Methods::CalculateLongestPath(const vector<vector<int> > matrix)
 {
     InfoLongestPath output;
-    
+
+    int m = matrix.size();
+    int n = matrix[0].size();
+
+    vector<vector<int> > length(m, vector<int>(n, -1));
+
+    int maxCol = 0;
+    int maxRow = 0;
+    int maxLength = 0;
+
+    for (int i = 0; i < m; ++i)
+    {
+        for (int j = 0; j < n; ++j)
+        {
+            int currentLength = DFS(i, j, matrix, length);
+            if (currentLength > maxLength)
+            {
+                maxRow = i;
+                maxCol = j;
+                maxLength = currentLength;
+            }
+        }
+    }
+
+    output.maxLength = maxLength;
 
     return output;
 }
