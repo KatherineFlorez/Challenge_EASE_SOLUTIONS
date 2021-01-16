@@ -1,7 +1,7 @@
 #pragma once
 // Methods class contains the methods for calcule the longest decreasing path 
+#include"InfoLongestPath.h"
 #include<string>
-#include<vector>
 
 class Methods final
 {
@@ -10,6 +10,7 @@ class Methods final
 		~Methods() = default;
 
 		std::vector<std::vector<int> > ReadFile(const std::string name);
+		InfoLongestPath CalculateLongestPath(const std::vector<std::vector<int> > matrix);
 
 	private:
 };

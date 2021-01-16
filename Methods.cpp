@@ -49,3 +49,9 @@ vector<vector<int> > Methods::ReadFile(const string name)
 
     return matrix;
 }
+InfoLongestPath Methods::CalculateLongestPath(const vector<vector<int> > matrix)
+{
+    InfoLongestPath output;
+
+    return output;
+}
