@@ -108,3 +108,36 @@ int Methods::DFS(int i, int j, const vector<vector<int> >& matrix, vector<vector
 
     return length[i][j];
 }
+InfoLongestPath Methods::GetPathInfo(int i, int j, const vector<vector<int>>& matrix, const vector<vector<int>>& length)
+{
+    InfoLongestPath output;
+    int maxLength = length[i][j];
+    int depth = 0;
+    vector<int> path(maxLength, 0);
+
+    for (int currentLength = maxLength; currentLength >= 1; --currentLength)
+    {
+        int index = maxLength - currentLength;
+
+        for (auto p : DIRECTION)
+        {
+            path[index] = matrix[i][j];
+            int x = i + p.first;
+            int y = j + p.second;
+
+            if (x < 0 || x >= static_cast<int>(matrix.size()) || y < 0 || y >= static_cast<int>(matrix[0].size())) continue;
+
+            if (currentLength - length[x][y] == 1)
+            {
+                depth += matrix[i][j] - matrix[x][y];
+                i = x;
+                j = y;
+                break;
+            }
+        }
+    }
+
+    output.maxPath = path;
+    output.maxDepth = depth;
+    return output;
+}

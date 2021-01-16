@@ -14,6 +14,7 @@ class Methods final
 
 	private:
 		int DFS(int i, int j, const std::vector<std::vector<int> >& matrix, std::vector<std::vector<int> >& length);
+		InfoLongestPath GetPathInfo(int i, int j, const std::vector<std::vector<int>>& matrix, const std::vector<std::vector<int>>& length);
 
 };
 
