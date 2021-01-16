@@ -16,5 +16,9 @@ int main()
     Methods methods;
     vector< vector<int> > matrix = methods.ReadFile(fileName);
 
+    if (!matrix.empty())
+    {
+        InfoLongestPath output = methods.CalculateLongestPath(matrix);
+    }
     return 0;
 }
