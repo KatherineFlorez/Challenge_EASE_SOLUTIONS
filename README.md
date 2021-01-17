@@ -1,6 +1,7 @@
-# Challenge for position as C++ software developer at EASE Solutions
+# Challenge EASE Solutions
 Repository with the solution of challenge in c++.
 Developed in Visual Studio Community 2019.
+The description of the challenge could be found in the file *Challenge.pdf*
 
 # Proyect structure
 The proyect is devided in 4 files
