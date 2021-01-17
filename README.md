@@ -6,25 +6,25 @@ The description of the challenge could be found in the file *Challenge.pdf*
 # Proyect structure
 The proyect is devided in 4 files
 
- 1. Challende_EASE_SOLUTIONS.cpp: Contains main function of the proyect
+ 1. Challende_EASE_SOLUTIONS.cpp: Contains main function of the project
     * Read the matrix information.
     * Calls the method to obtain the longest path information.
     * Prints the information.
  2. Methods.h: Header file with the declaration of class "Methods" with a default constructor and destructor and the definition of the methods.
     * Public methods:
-      * PrintLongestPath: Print into console the given path.
+      * PrintLongestPath: Print into the console the given path.
       * ReadFile: Read .txt file and save the information.
-      * InfoLongestPath: Main method to calculate decrasing longest path into the matrix.
+      * InfoLongestPath: Main method to calculate decreasing longest path into the matrix.
     * Private Methods:
-      * DFS: Depth Fisrt Search algorithm for search the longest decreasing length starting of each of the elements of the matrix. 
-      * GetPathInfo: Calculate the steep and save the path of an specific initial point and maximun length.
+      * DFS: Depth First Search algorithm for search the longest decreasing length starting of each of the elements of the matrix. 
+      * GetPathInfo: Calculate the steep and save the path of a specific initial point and maximum length.
 3. Methods.cpp: Contains the methods declared in Methods.h
 4. InfoLongestPath.h: Header file that contains the declaration of the structure InfoLongestPath, that contains: 
-   * The maximun Steepest. 
-   * The maximun Longest.
+   * The maximum Steepest. 
+   * The maximum Longest.
    * The elements of the decreasing longest path.
  
-# Test ejecution:
+# Test execution:
 The project requests the location of the input .txt file through a message on the console: Enter file location:
 ```markdown
 Enter file location: (Input/xxx.txt)
@@ -38,9 +38,15 @@ And returns the information with the output messages:
   Calculated path: X-X-X-X-X
 ```
 # Dataset 
-Directory Input contains diferents dataset saved in .txt file. 
-File structure : First line that have the dimesions of the matrix M x N, the matrix of elevation.
+Directory Input contains different datasets saved in .txt file. 
 
+File structure: First line that has the dimensions of the matrix M x N, the matrix of elevation.
+```markdown
+3 3 
+1 2 3
+4 5 6
+7 8 9
+```
 * 4x4.txt: 4 x 4 matrix
   * Length of calculated path: 5
   * Drop of calculated path: 8
