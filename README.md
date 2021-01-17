@@ -64,5 +64,5 @@ File structure: First line that has the dimensions of the matrix M x N, the matr
   
 * map.txt:
   * Length of calculated path: 15
-  * Drop of calculated path: 1419
-  * Calculated path: 1466-1078-932-915-848-820-527-516-323-273-76-71-67-56-47
+  * Drop of calculated path: 1422
+  * Calculated path: 1422-142-1316-1304-1207-1162-965-945-734-429-332-310-214-143-0
