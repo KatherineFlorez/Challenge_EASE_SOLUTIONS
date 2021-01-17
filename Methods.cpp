@@ -14,7 +14,7 @@ const vector<pair<int, int> > DIRECTION{ {-1,0},{1,0},{0,-1},{0,1} };
 
 void Methods::PrintLongestPath(const vector<int>& longestPath)
 {
-    cout << "The longest path is: " << endl;
+    cout << "Calculated path: " << endl;
 
     for (int i = 0; i < static_cast<int>(longestPath.size() - 1); ++i)
     {

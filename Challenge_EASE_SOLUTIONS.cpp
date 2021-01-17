@@ -20,9 +20,9 @@ int main()
     if (!matrix.empty())
     {
         InfoLongestPath output = methods.CalculateLongestPath(matrix);
+        cout << "Length of calculated path: " << output.maxLength << endl;
+        cout << "Drop of calculated path:s " << output.maxSteep << endl;
         methods.PrintLongestPath(output.maxPath);
-        cout << "The length of the longest path is " << output.maxLength << endl;
-        cout << "The steep of the longest path is " << output.maxSteep << endl;
     }
 
     return 0;
