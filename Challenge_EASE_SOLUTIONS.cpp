@@ -20,6 +20,7 @@ int main()
     if (!matrix.empty())
     {
         InfoLongestPath output = methods.CalculateLongestPath(matrix);
+        methods.PrintLongestPath(output.maxPath);
         cout << "The length of the longest path is " << output.maxLength << endl;
         cout << "The depth of the longest path is " << output.maxDepth << endl;
     }
