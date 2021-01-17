@@ -38,7 +38,6 @@ And returns the information with the output messages:
   Calculated path: X-X-X-X-X
 ```
 # Dataset 
-And return the calculated values as: 
 Directory Input contains diferents dataset saved in .txt file. 
 File structure : First line that have the dimesions of the matrix M x N, the matrix of elevation.
 
