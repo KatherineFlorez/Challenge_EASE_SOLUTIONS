@@ -1,11 +1,11 @@
 #pragma once
-// InfoLongestPath.h : header file contain the maximun depth, length and path
+// InfoLongestPath.h : header file contain the maximun steep, length and path
 
 #include<vector>
 
 struct InfoLongestPath
 {
-	int maxDepth = 0;
+	int maxSteep = 0;
 	int maxLength = 0;
 	std::vector<int> maxPath;
 };

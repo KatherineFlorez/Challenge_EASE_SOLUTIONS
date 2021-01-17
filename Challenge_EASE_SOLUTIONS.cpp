@@ -22,7 +22,7 @@ int main()
         InfoLongestPath output = methods.CalculateLongestPath(matrix);
         methods.PrintLongestPath(output.maxPath);
         cout << "The length of the longest path is " << output.maxLength << endl;
-        cout << "The depth of the longest path is " << output.maxDepth << endl;
+        cout << "The steep of the longest path is " << output.maxSteep << endl;
     }
 
     return 0;

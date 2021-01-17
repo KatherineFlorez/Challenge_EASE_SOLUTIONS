@@ -102,7 +102,7 @@ InfoLongestPath Methods::CalculateLongestPath(const vector<vector<int> > matrix)
 
                 pathIsCalculated = true;
 
-                if (output.maxDepth < temp.maxDepth)
+                if (output.maxSteep < temp.maxSteep)
                 {
                     maxRow = i;
                     maxCol = j;
@@ -149,7 +149,7 @@ InfoLongestPath Methods::GetPathInfo(int i, int j, const vector<vector<int>>& ma
 {
     InfoLongestPath output;
     int maxLength = length[i][j];
-    int depth = 0;
+    int steep = 0;
     vector<int> path(maxLength, 0);
 
     for (int currentLength = maxLength; currentLength >= 1; --currentLength)
@@ -166,7 +166,7 @@ InfoLongestPath Methods::GetPathInfo(int i, int j, const vector<vector<int>>& ma
 
             if (currentLength - length[x][y] == 1)
             {
-                depth += matrix[i][j] - matrix[x][y];
+                steep += matrix[i][j] - matrix[x][y];
                 i = x;
                 j = y;
                 break;
@@ -175,6 +175,6 @@ InfoLongestPath Methods::GetPathInfo(int i, int j, const vector<vector<int>>& ma
     }
 
     output.maxPath = path;
-    output.maxDepth = depth;
+    output.maxSteep = steep;
     return output;
 }
