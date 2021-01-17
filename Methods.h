@@ -8,7 +8,8 @@ class Methods final
 	public:
 		Methods() = default;
 		~Methods() = default;
-
+		//Print longest path into console
+		void PrintLongestPath(const std::vector<int>& longestPath);
 		//Read .txt file and save the information
 		std::vector<std::vector<int> > ReadFile(const std::string name);
 		//Main method to calculate Longesth Path

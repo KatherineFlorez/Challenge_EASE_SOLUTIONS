@@ -12,6 +12,17 @@ using std::vector;
 
 const vector<pair<int, int> > DIRECTION{ {-1,0},{1,0},{0,-1},{0,1} };
 
+void Methods::PrintLongestPath(const vector<int>& longestPath)
+{
+    cout << "The longest path is: " << endl;
+
+    for (int i = 0; i < static_cast<int>(longestPath.size() - 1); ++i)
+    {
+        cout << longestPath[i] << "-";
+    }
+
+    cout << longestPath.back() << endl;
+}
 vector<vector<int> > Methods::ReadFile(const string name)
 {
     vector< vector<int> > matrix;
