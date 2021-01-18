@@ -10,7 +10,7 @@ using std::pair;
 using std::string;
 using std::vector;
 
-const vector<pair<int, int> > DIRECTION{ {-1,0},{1,0},{0,-1},{0,1} };
+const vector<pair<int, int> > DIRECTION{ {1,0},{0,-1},{0,1},{-1,0} };
 
 void Methods::PrintLongestPath(const vector<int>& longestPath)
 {
